@@ -15,11 +15,11 @@ fig, ax = createPitch(pitch_width, pitch_height, 'yards', 'gray')
 
 # List of games and JSON files as dictionary
 games_dict = {
-    'Barcelona - Alavez': '15946',
-    'Barcelona - Real Valladolid': '15956',
-    'Barcelona - Huesca': '15973',
-    'Barcelona - Real Sociedad': '15978',
-    'Barcelona - Girona': '15986'
+    'Alavez': '15946',
+    'Real Valladolid': '15956',
+    'Huesca': '15973',
+    'Real Sociedad': '15978',
+    'Girona': '15986'
 }
 
 games_list = list(games_dict.keys())
@@ -27,17 +27,18 @@ games_id_list = list(games_dict.values())
 
 
 # Set page config
-st.set_page_config(page_title='Football Game Stats', page_icon=':soccer:', initial_sidebar_state='expanded')
+st.set_page_config(page_title='F.C. Barcelona Game Stats', page_icon=':soccer:', initial_sidebar_state='expanded')
 
 # Drop-down menu "Select Football Game"
 st.sidebar.markdown('## Select Football Game')
 menu_game = st.sidebar.selectbox('Select Game', games_list)
-st.sidebar.markdown("""Here you can select one of 15 football games from the UEFA Euro 2020 knockout stage: """)
+st.sidebar.markdown("""Here you can select one of 5 football games from the 2018/2019 La Liga Season: """)
 st.sidebar.markdown(""" 
-                    * eight games in the round of 16
-                    * four quarter-finals
-                    * two semi-finals
-                    * one final
+                    * Deportivo Alavez
+                    * Real Valladolid FC
+                    * Huesca FC
+                    * Real Sociedad
+                    * Girona FC
                     """)
 
 
@@ -82,9 +83,6 @@ st.sidebar.markdown('Select a player and activity. Statistics plot will appear o
 # Titles and text above the pitch
 st.title('Football Game Stats')
 st.markdown("""
-The knockout phase of UEFA Euro 2020 took place between 26 June 2021 and 11 July 2021. It consisted of 
-15 matches between 16 teams successfully qualified from the group stage. In the final game in London Italy 
-won England on penalty kicks and took the trophy second time in their history.
 """)
 st.write("""* Use dropdown-menus on the left side to select a game, team, player, and activity. 
 Statistics plot will appear on the pitch below.""")
@@ -223,9 +221,8 @@ st.write(team_2, ':')
 st.write(', '.join(str(e) for e in player_names_2))
 st.subheader('About this app')
 st.markdown("""
+
 This app displays player's statistics plotted on the pitch. Data is taken 
 from StatsBomb Open Data at https://github.com/statsbomb/open-data
-Link to event:  https://en.wikipedia.org/wiki/UEFA_Euro_2020_knockout_phase
-Source code on GitHub: https://github.com/AndriiGoz/football_game_stats
-Author: Andrii Gozhulovskyi
+
 """)
