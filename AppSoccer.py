@@ -81,7 +81,7 @@ st.sidebar.markdown('Select a player and activity. Statistics plot will appear o
 
 
 # Titles and text above the pitch
-st.title('Football Game Stats')
+st.title('F.C. Barcelona Player Game Stats')
 st.markdown("""
 """)
 st.write("""* Use dropdown-menus on the left side to select a game, team, player, and activity. 
